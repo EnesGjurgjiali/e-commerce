@@ -1,0 +1,36 @@
+@use '../../../_css/queries.scss' as *;
+
+.card {
+  position: relative;
+  background-color: var(--color-dark-50);
+  min-height: 360px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: -2px 1px 23px -5px rgba(10,10,10,0.25);
+-moz-box-shadow: -2px 1px 23px -5px rgba(10,10,10,0.25);
+box-shadow: -2px 1px 23px -5px rgba(10,10,10,0.25);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+.title {
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}

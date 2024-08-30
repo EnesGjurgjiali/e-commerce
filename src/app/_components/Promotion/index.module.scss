@@ -1,0 +1,69 @@
+@use '../../_css/queries.scss' as *;
+
+.promotion {
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include small-break {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  font-weight: 500;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.image {
+  min-height: 500px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dealBtn {
+  width: fit-content;
+
+  @include mid-break {
+    width: 100%;
+  }
+}
+
+.stats {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 100px);
+
+  @include large-break {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.statBox {
+  border-radius: 10px;
+  border: 1px solid var(--color-dark-60);
+  padding: 16px;
+  min-width: 100px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and box-shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Initial shadow */
+
+  h4 {
+    font-weight: bold;
+  }
+}
+
+.statBox:hover{
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
